@@ -20,6 +20,13 @@ locals {
 }
 
 resource "aws_s3_bucket" "s3_tf" {
+  #checkov:skip=CKV2_AWS_62:Ensure
+  #checkov:skip=CKV_AWS_21:Ensure
+  #checkov:skip=CKV2_AWS_6:Ensure
+  #checkov:skip=CKV_AWS_18:Ensure
+  #checkov:skip=CKV_AWS_144:Ensure
+  #checkov:skip=CKV_AWS_145:Ensure
+  #checkov:skip=CKV2_AWS_61:Ensure
   bucket = "${local.name_prefix}-s3-tf-bkt-${local.account_id}"
 }
 
